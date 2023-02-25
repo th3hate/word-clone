@@ -40,10 +40,54 @@ button {
   color: inherit;
 }
 
+.reset-button {
+  padding: 20px 20px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  text-color: white;
+  margin: auto;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.keyboard .letter {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 4px;
+  display: grid;
+  place-content: center;
+  background: var(--color-gray-900);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.keyboard .letter.correct {
+  background: var(--color-success);
+  color: white;
+}
+.keyboard .letter.incorrect {
+  background: var(--color-gray-300);
+  color: white;
+}
+.keyboard .letter.misplaced {
+  background: var(--color-warning);
+  color: white;
 }
 
 header {
@@ -165,7 +209,7 @@ h1 {
   position: fixed;
   left: 0;
   right: 0;
-  bottom: 0;
+  top: 0;
   width: 100%;
   max-width: 600px;
   margin: 0 auto;

@@ -4,7 +4,7 @@
 
 In this project, we'll recreate a popular online word game, Wordle:
 
-![Demo showing the finished product, our Wordle clone](docs/wordle-demo.gif)
+![Demo showing the finished product, our Wordle clone][image-1]
 
 In Wordle, users have 6 attempts to guess a 5-letter word. You're helped along the way by ruling out letters that aren't in the word, and being told whether the correct letters are in the correct location or not.
 
@@ -12,12 +12,12 @@ In Wordle, users have 6 attempts to guess a 5-letter word. You're helped along t
 
 This project is created with create-react-app. It's intended to be run locally, on your computer, using Node.js and NPM.
 
-If you're not sure how to run a local development server, or if you run into some trouble, check out the [“Local Development” instructions](https://courses.joshwcomeau.com/joy-of-react/project-wordle/03-dev-server). It includes all the info you need to know, including troubleshooting common issues.
+If you're not sure how to run a local development server, or if you run into some trouble, check out the [“Local Development” instructions][1]. It includes all the info you need to know, including troubleshooting common issues.
 
 > **NOTE: This project is tricky!**
->
+> 
 > This project is meant to be challenging, because I believe that the best way to learn is to be challenged. Depending on your experience level, though, you may feel like it's unreasonably difficult.
->
+> 
 > This workshop is split into 5 exercises, and each exercise has a solution video. If you spend more than 10 minutes stuck on an exercise, I encourage you to **watch the solution.** If things are still unclear after that, please ask questions in the Discord community!
 
 ## Exercise 1: GuessInput
@@ -28,7 +28,7 @@ In the standard Wordle game, a global event listener registers keypresses. This 
 
 We'll render a little form that holds a text input:
 
-![Screenshot showing the guess input UI](docs/guess-input.png)
+![Screenshot showing the guess input UI][image-2]
 
 Your job in this first exercise is to create a new component for this UI, and render it inside the `Game` component.
 
@@ -45,7 +45,7 @@ Here's a minimal representation of the markup expected to be produced by this ne
 
 Here's a quick screen recording of the expected result:
 
-![Screen recording showing the guess being entered. It gets logged to the console, and erased from the input](docs/submit-guess.gif)
+[]()
 
 **Acceptance Criteria:**
 
@@ -58,7 +58,7 @@ Here's a quick screen recording of the expected result:
   - The input should be reset to an empty string.
 - **The user's input should be converted to ALL UPPERCASE.** No lower-case letters allowed.
 - The input should have a minimum and maximum length of 5.
-  - **NOTE:** The `minLength` validator is a bit funky; you may wish to use the `pattern` attribute instead. This is discussed in more detail on the [Solution page](https://courses.joshwcomeau.com/joy-of-react/project-wordle/06-solution#an-alternative-to-minlength).
+  - **NOTE:** The `minLength` validator is a bit funky; you may wish to use the `pattern` attribute instead. This is discussed in more detail on the [Solution page][3].
 
 ## Exercise 2: Keeping track of guesses
 
@@ -68,7 +68,7 @@ For now, we aren't worrying about any game-logic stuff. We're still setting up t
 
 Our goal in this exercise is to render each of the user's guesses:
 
-![Screen recording showing each guess printed out above the text input from the last exercise](docs/printed-word-list.gif)
+![Screen recording showing each guess printed out above the text input from the last exercise][image-3]
 
 And here's an example of the expected DOM structure:
 
@@ -89,13 +89,13 @@ And here's an example of the expected DOM structure:
 
 In the real Wordle game, the initial screen shows 6 rows of 5 squares:
 
-![Screenshot of real Wordle, showing a 5x6 grid](docs/wordle-squares.png)
+![Screenshot of real Wordle, showing a 5x6 grid][image-4]
 
 In this exercise, we'll update our code to display a similar grid. We'll show 6 rows of guesses, no matter how many guesses the user has submitted, and each row will consist of 5 cells.
 
 As the user submits guesses, their guess will populate the cells:
 
-![Screen recording showing each guess being added to the 5x6 grid](docs/words-in-cells.gif)
+![Screen recording showing each guess being added to the 5x6 grid][image-5]
 
 We need to update our DOM structure for the `GuessResults` component so that it looks something like this:
 
@@ -160,7 +160,7 @@ Alright: over the first 3 exercises, we've been setting up all of the structure 
 
 In this exercise, we'll add some CSS classes to color the background of each cell, based on the results and the correct answer:
 
-![Screen recording. The guesses are applied to the game board, and the background colors update accordingly](docs/words-with-backgrounds.gif)
+![Screen recording. The guesses are applied to the game board, and the background colors update accordingly][image-6]
 
 Inside `/src/game-helpers.js`, you'll find a helper function, `checkGuess`. As parameters, it takes a single guess, as well as the correct answer. It returns an array that contains the status for each letter.
 
@@ -215,11 +215,11 @@ We're so close! We only have one concern left: ending the game.
 
 If the user wins the game, a happy banner should be shown:
 
-![Screenshot of a won game, showing a green success banner](docs/happy-banner.png)
+![Screenshot of a won game, showing a green success banner][image-7]
 
 If the user loses the game, by contrast, a sad banner should be shown:
 
-![Screenshot of a won game, showing a red failure banner](docs/sad-banner.png)
+![Screenshot of a won game, showing a red failure banner][image-8]
 
 The user wins the game when their guessed word is identical to the `answer`. They lose the game if they submit 6 guesses without winning.
 
@@ -261,13 +261,13 @@ Also, feel free to come up with _your own_ stretch goals! If there's a thing you
 
 In the real Wordle game, a keyboard is shown below the guesses:
 
-![Screenshot of the Wordle game, showing a keyboard below the game board](docs/bottom-keyboard-original.png)
+![Screenshot of the Wordle game, showing a keyboard below the game board][image-9]
 
 This keyboard is an important game element, since it makes it easy to tell which letters have already been tested.
 
 Here's what the keyboard looked like in my implementation:
 
-![Screenshot of our Wordle clone, showing a keyboard below the game board](docs/bottom-keyboard-clone.png)
+![Screenshot of our Wordle clone, showing a keyboard below the game board][image-10]
 
 **Note: Styling isn't provided for stretch goals.** You'll need to come up with your own CSS. You can add it to `src/styles.css`.
 
@@ -298,3 +298,17 @@ _HINT:_ This will require moving the `answer` into state. You'll want to do the 
 
 - A "Restart Game" button is shown at the end of the game. You can put this button in the `GameOverBanner`, or wherever else you'd like!
 - Clicking the button should select a new correct word and reset all other state.
+
+[1]:	https://courses.joshwcomeau.com/joy-of-react/project-wordle/03-dev-server
+[3]:	https://courses.joshwcomeau.com/joy-of-react/project-wordle/06-solution#an-alternative-to-minlength
+
+[image-1]:	docs/wordle-demo.gif
+[image-2]:	docs/guess-input.png
+[image-3]:	docs/printed-word-list.gif
+[image-4]:	docs/wordle-squares.png
+[image-5]:	docs/words-in-cells.gif
+[image-6]:	docs/words-with-backgrounds.gif
+[image-7]:	docs/happy-banner.png
+[image-8]:	docs/sad-banner.png
+[image-9]:	docs/bottom-keyboard-original.png
+[image-10]:	docs/bottom-keyboard-clone.png
